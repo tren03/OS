@@ -27,11 +27,10 @@ int main() {
         scanf("%d", &(processes[i].arrivalTime));
     }
     
-    sortByArrivalTime(processes, numProcesses);
-    
-    printf("Process\tBurst Time\tArrival Time\tTurn Around Time\tWaiting Time\n");
+    sortByArrivalTime(processes, numProcesses);   
     calculateTimes(processes, numProcesses);
     
+    printf("Process\tBurst Time\tArrival Time\tTurn Around Time\tWaiting Time\n");   
     float avgTurnaroundTime = 0, avgWaitingTime = 0;
     for (i = 0; i < numProcesses; i++) {
         avgTurnaroundTime += processes[i].turnaroundTime;
